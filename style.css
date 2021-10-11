@@ -14,9 +14,10 @@
       width: 100vw;
       text-align: center;
       color: white;
+      font-size: 2rem;
   }
 
-  .title-content p{
+  .title-content h3{
       padding-left: 25px;
   }
 
@@ -74,11 +75,17 @@
       background-color: #ff7800;
     }
   }
+
+  .fire-wrapper{
+    display: block;
+    height: 100px;
+    width: 100vw;
+    margin-top: 10vh;
+  }
   
   .fire {
-    position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 50px);
+    position: relative;
+    text-align: center;
     width: 100px;
     height: 100px;
     background-color: transparent;
