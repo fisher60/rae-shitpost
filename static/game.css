@@ -1,10 +1,65 @@
-html, body {
-    height: 100vh;
-    width: 100vw;
+
+
+.gameWrapper{
+    height: 100%;
+    width: 100%;
+    color: white;
 }
 
-#gameCanvas {
-    height: 100vh;
-    width: 100vw;
+.gameTitle{
+    text-align: center;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgba(6, 221, 250, 0.3);
+}
+
+.titleOptions{
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titleOptions ul{
+    padding: 0;
+    list-style: none;
+}
+.titleOptions ul li{
+    margin: 0 25px 0 25px;
+    display: inline-block;
+}
+
+.titleOptions button{
+    width: 150px;
+    height: 50px;
     color: white;
+}
+
+.startButton{
+    background-color: rgb(0, 190, 95);
+}
+
+.endButton{
+    background-color: rgb(230, 15, 15);
+}
+
+.statusBar{
+    color: black;
+    width: 100%;
+    background-color: rgba(6, 221, 250, 0.6);
+}
+
+.statusBar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.statusBar ul li{
+    padding-left: 8%;
+    padding-right: 8%;
+    display: inline-block;
 }

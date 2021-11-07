@@ -5,7 +5,31 @@
         <link rel="stylesheet" href="static/game.css"/>
     </head>
     <body>
-        <canvas id="gameCanvas"></canvas>
+        <div class="gameWrapper">
+            <div class="gameTitle">
+                <h1>Rae-Game</h1>
+                <div class="titleOptions">
+                    <ul>
+                        <li>
+                            <button class="startButton" onclick="resetGame()">New Game</button>
+                        </li>
+                        <li>
+                            <button class="endButton">Exit</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="statusBar">
+                <ul>
+                    <li>Food: <span id="foodVal">0</span></li>
+                    <li>Warmth: <span id="warmthVal">0</span></li>
+                    <li>Money: <span id="moneyVal">0</span></li>
+                    <li>Chicken Count: <span id="chickenVal">0</span></li>
+                </ul>
+            </div>
+
+        </div>
         <script src="game.js"></script>
     </body>
 </html>
