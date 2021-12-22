@@ -7,32 +7,72 @@
 
     <body>
         <div class="title-content">
-            <h1>RAE Is Certified Scaraey</h1>
+          <span class="has-clicked" id="hasClicked1">1 :</span><span class="has-clicked" id="hasClicked2">: 2</span>
+            <h1><span class="rae-click" id="rae1">RAE</span> Is Certified Scaraey</h1>
             <h3>- A Tall-ish person</h3>
         </div>
 
-        <div class="fire-wrapper">
-          <div class="fire">
-              <div class="fire-left">
-                <div class="main-fire"></div>
-                <div class="particle-fire"></div>
-              </div>
-              <div class="fire-main">
-                <div class="main-fire"></div>
-                <div class="particle-fire"></div>
-              </div>
-              <div class="fire-right">
-                <div class="main-fire"></div>
-                <div class="particle-fire"></div>
-              </div>
-              <div class="fire-bottom">
-                <div class="main-fire"></div>
-              </div>
-            </div>
-          </div>
-          <div class="title-content">
-            <h3>Rae is also 6'5" tall -- Certified</h3>
-          </div>
+        <div class="tree-wrapper">
+          <img src="images/tree.png" alt="christmas tree">
+        </div>
+
+        <div class="title-content">
+          <h3><span class="rae-click" id="rae2">Rae</span> is also 6'5" tall -- Certified</h3>
+        </div>
+        <div class="jungkook-wrapper" id="jungkook">
+          <img src="images/jungkook.png" alt="jungkook">
+        </div>
     </body>
+
+    <script>
+      let imageLoaded = false;
+
+      let jungkook = document.getElementById("jungkook");
+
+      let hasClicked1 = document.getElementById("hasClicked1");
+      let hasClicked2 = document.getElementById("hasClicked2");
+
+      let rae1IsClicked = false;
+      let rae2IsClicked = false;
+
+      let raeClick1 = document.getElementById("rae1");
+      let raeClick2 = document.getElementById("rae2");
+
+      function updateClicks(){
+        if (rae1IsClicked === true){
+          hasClicked1.style.display = "inline";
+          raeClick1.style.color = "green";
+        }
+        else{
+          hasClicked1.style.display = "none";
+          raeClick1.style.color = "white";
+        }
+        if (rae2IsClicked === true){
+          hasClicked2.style.display = "inline";
+          raeClick2.style.color = "green";
+        }
+        else{
+          hasClicked2.style.display = "none";
+          raeClick2.style.color = "white";
+        }
+
+        if (rae1IsClicked === true && rae2IsClicked === true){
+          imageLoaded = true;
+          jungkook.style.display = "inline-block";
+        }
+      }
+
+      raeClick1.onclick = () => {
+        if (!imageLoaded){
+          rae1IsClicked = !rae1IsClicked; updateClicks();
+        }
+        
+      }
+      raeClick2.onclick = () => {
+        if (!imageLoaded){
+          rae2IsClicked = !rae2IsClicked; updateClicks();
+        }
+      }
+    </script>
 
 </html>
