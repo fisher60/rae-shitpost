@@ -25,14 +25,29 @@
 
     <body>
         <div class="title-content">
-          <span class="has-clicked" id="hasClicked1">1 :</span><span class="has-clicked" id="hasClicked2">: 2</span>
-            <h1><span class="rae-click" id="rae1">RAE</span> Is A Chicken</h1>
+            <h1><span class="rae-click" onclick="raeClick()">RAE</span> Is A Chicken</h1>
         </div>
 
         <div class="chicken">
-            <img class="chicken-img animation-bounce" src="./chick.png" />
+            <img id="chickImg" class="chicken-img animation-bounce" src="./chick.png" />
 
         </div>
+
+        <script>
+            let chickClass = document.getElementById("chickImg").getAttribute("class");
+            let clicked = false;
+
+            function raeClick(){
+                clicked = !clicked;
+
+                if (clicked === true){
+                    chickImg.className = "chicken-img animation-spin";
+                }
+                else{
+                    chickImg.className = "chicken-img animation-bounce";
+                }
+            }
+        </script>
 
     </body>
 </html>
